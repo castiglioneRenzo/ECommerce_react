@@ -4,9 +4,9 @@ import CartWidget from './CartWidget'
 
 const navigation = [
   { name: 'Inicio', href: '#', current: true },
-  // { name: 'Team', href: '#', current: false },
-  // { name: 'Projects', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
+  { name: 'Perfumes Hombres', href: '#', current: false },
+  { name: 'Perfumes Mujer', href: '#', current: false },
+  { name: 'Promociones', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -30,7 +30,7 @@ function NavBar() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <BuildingStorefrontIcon className="h-8 w-8 text-white" />
-              <span className="ml-2 text-white text-lg font-bold">Mi Tienda</span>
+              <span className="ml-2 text-white text-lg font-bold">AtomParfums</span>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
