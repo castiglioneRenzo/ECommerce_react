@@ -35,10 +35,14 @@ const products = [
 ]
 
 import React, { useState, useEffect } from 'react';
+
 function ItemListContainer({ greeting }) {
 
   const [items, setItems] = useState([]);
   useEffect(() => {
+    const url = 'https://fakestoreapi.com/products';
+    const urlCategory = 'https://fakestoreapi.com/products/category/jewelery';
+
     fetch('https://fakestoreapi.com/products')
       .then((response) => response.json())
       .then((data) => {
