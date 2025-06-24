@@ -1,15 +1,24 @@
+import { useState, useEffect } from 'react';
+import ItemList from './ItemList';
+import { useParams } from 'react-router';
+
 function ItemListContainer({ greeting }) {
-  return (
-    <div className="grid grid-cols-3">
-      <div></div> {/* columna vacía izquierda */}
-      <div className="item-list-container col-span-1">
-        <div className="flex flex-col items-center gap-4">
-          <h1 className="text-3xl antialiased text-indigo-900">{greeting}</h1>
-          <p>Here you will find a list of items.</p>
-        </div>
-      </div>
-      <div></div> {/* columna vacía derecha */}
-    </div>
-  );
+
+  const [items, setItems] = useState([]);
+  const { categoryId } = useParams();
+
+  useEffect(() => {
+    const url = 'https://fakestoreapi.com/products';
+    const urlCategory = `https://fakestoreapi.com/products/category/${categoryId}`;
+
+    fetch(categoryId ? urlCategory : url)
+      .then((response) => response.json())
+      .then((data) => {
+        setItems(data);
+      })
+      .catch((error) => console.error('Error fetching products:', error));
+  }, [categoryId]);
+
+  return (<ItemList items={items}/>);
 }
 export default ItemListContainer;
