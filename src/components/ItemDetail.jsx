@@ -1,3 +1,4 @@
+'use client'
 import RatingStars from "./RatingStars";
 import RatingHalfStars from "./RatingHalfStars";
 import ItemCount from "./ItemCount";

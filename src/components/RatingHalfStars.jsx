@@ -1,3 +1,4 @@
+'use client'
 function RatingStars({ rating }) {
   const roundedRating = Math.round(rating * 2) / 2;
 

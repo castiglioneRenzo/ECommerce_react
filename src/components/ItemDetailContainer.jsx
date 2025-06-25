@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect, use } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";

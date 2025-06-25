@@ -1,3 +1,4 @@
+'use client'
 function RatingStars({ rating }) {
   const roundedRating = Math.round(rating); // Redondeamos el rating al entero más cercano
 
