@@ -1,6 +1,7 @@
 import RatingStars from "./RatingStars";
 import RatingHalfStars from "./RatingHalfStars";
 import ItemCount from "./ItemCount";
+import { Button } from "@headlessui/react";
 
 function capitalizeFirstLetter(text) {
   if (!text) return '';
@@ -47,8 +48,21 @@ function ItemDetail( { item }) {
               </div>
 
           </dl>
+          {/* ItemCount */}
           <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-            <ItemCount />
+            <div key="Cantidad" className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900">Cantidad</dt>
+                <dd className="mt-2 text-sm text-gray-500">
+                  <ItemCount />
+                </dd>
+            </div>
+          {/* Boton Agregar al Carrito ( POR AHORA SIN FUNCIONALIDAD ) */}
+            <div key="Comprar" className="border-t border-gray-200 pt-4">
+              <dt className="font-medium text-gray-900 invisible">.</dt>
+                <dd className="mt-2 text-sm text-gray-500">
+                  <button className="btn btn-primary">Agregar al Carrito</button>
+                </dd>
+            </div>
           </dl>
         </div>
         
