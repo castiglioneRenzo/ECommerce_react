@@ -1,5 +1,6 @@
 import RatingStars from "./RatingStars";
 import RatingHalfStars from "./RatingHalfStars";
+import ItemCount from "./ItemCount";
 
 function capitalizeFirstLetter(text) {
   if (!text) return '';
@@ -45,6 +46,9 @@ function ItemDetail( { item }) {
                  </dd>
               </div>
 
+          </dl>
+          <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+            <ItemCount />
           </dl>
         </div>
         
